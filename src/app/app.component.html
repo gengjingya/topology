@@ -265,7 +265,7 @@
           </div>
         </div>
       </div>
-      <div class="separator"></div>
+      <!-- <div class="separator"></div>
       <div class="item" (click)="onMenu('save')" title="保存到云端">
         <a>
           <i class="iconfont icon-upload"></i>
@@ -285,9 +285,9 @@
         <a (click)="onMenu('share')">
           <i class="iconfont icon-share" [class.primary]="file.id && file.shared"></i>
         </a>
-      </div>
+      </div> -->
     </div>
-    <div class="separator"></div>
+    <!-- <div class="separator"></div>
     <div class="flex pr20" *ngIf="!user">
       <div class="item">
         <a (click)="onSignup()">注册</a>
@@ -296,7 +296,7 @@
       <div class="item">
         <a (click)="onLogin()">登录</a>
       </div>
-    </div>
+    </div> -->
     <div class="flex ph20" *ngIf="user">
       <div class="item">
         <a [href]="urls.account" class="flex middle">

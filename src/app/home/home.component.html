@@ -30,7 +30,7 @@
   <div class="props">
     <div class="pv5">
       <div *ngIf="!selected">
-        <div class="title">欢迎使用le5le-topology！</div>
+        <!-- <div class="title">欢迎使用le5le-topology！</div>
         <div class="ml30 mb20 mt10">
           <a href="https://github.com/le5le-com/topology" target="_blank" class="block mt20 mb15"
             style="color:#f60!important;text-decoration: underline;">喜欢，点击这里打个star吧</a>
@@ -57,7 +57,7 @@
             <li>Ctrl + 鼠标滚轮：缩放</li>
             <li>添加或选中节点，右侧属性支持上传各种图片哦</li>
           </ul>
-        </div>
+        </div> -->
       </div>
       <div *ngIf="selected">
         <app-props [props]="selected" [readonly]="readonly" (ok)="onChangeProps($event)"

@@ -7,7 +7,8 @@ export const Tools = [
         name: 'rectangle',
         icon: 'icon-rect',
         data: {
-          text: 'Topology',
+        //   text: 'Topology',
+          text: '正方形',
           rect: {
             width: 100,
             height: 100
@@ -17,9 +18,9 @@ export const Tools = [
           paddingTop: 10,
           paddingBottom: 10,
           name: 'rectangle',
-          icon: '\ue64d',
-          iconFamily: 'topology',
-          iconColor: '#2f54eb'
+        //   icon: '\ue64d',
+        //   iconFamily: 'topology',
+        //   iconColor: '#2f54eb'
         }
       },
       {
@@ -191,7 +192,7 @@ export const Tools = [
         }
       },
       {
-        name: 'file',
+        name: 'file', 
         icon: 'icon-file',
         data: {
           text: '文档',
@@ -210,7 +211,7 @@ export const Tools = [
         name: 'text',
         icon: 'icon-text',
         data: {
-          text: 'le5le-topology / 乐吾乐',
+          text: '点击此处进行文本编辑',
           rect: {
             width: 160,
             height: 30
@@ -224,8 +225,10 @@ export const Tools = [
         data: {
           text: '',
           rect: {
-            width: 100,
-            height: 100
+            width: 450,
+            height: 600,
+            x:272,
+            y:-9,
           },
           name: 'image',
           image: '/assets/img/logo.png'

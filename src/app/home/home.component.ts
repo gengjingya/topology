@@ -16,6 +16,7 @@ import { environment } from 'src/environments/environment';
 import { CoreService } from '../core/core.service';
 import { TopologyService } from './topology.service';
 import { Tools } from './tools/config';
+import { Moment } from 'moment';
 
 declare var C2S: any;
 declare var JSZip: any;
@@ -171,6 +172,29 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // Wait for parent dom render.
     setTimeout(() => {
+      let date=new Date();
+      let dateYear = date.getFullYear()+'';
+      let dateMonth = date.getMonth() +1+'';
+      if(parseInt(dateMonth) < 10){
+        dateMonth = '0' + dateMonth;
+      }
+      let dateRi = date.getDate()+ '';
+      if(parseInt(dateRi) < 10){
+        dateRi = '0' + dateRi;
+      }
+      var hour = date.getHours()+''; 
+      var minutes = date.getMinutes()+''; 
+      var second = date.getSeconds()+'';
+      if(parseInt(hour) <10){
+        hour = "0" + hour;
+       }
+       if(parseInt(minutes) <10){
+        minutes = "0" + minutes;
+       }
+       if(parseInt(second) <10){
+        second = "0" + second ;
+       }
+      let fileName = dateYear+dateMonth+dateRi+hour+minutes+second;
       this.canvas = new Topology(this.workspace.nativeElement, this.canvasOptions);
       this.subRoute = this.activateRoute.queryParamMap.subscribe(params => {
         if (params.get('id')) {
@@ -180,7 +204,7 @@ export class HomeComponent implements OnInit, OnDestroy {
             id: '',
             version: '',
             data: { nodes: [], lines: [] },
-            name: '空白文件',
+            name: fileName,
             desc: '',
             image: '',
             userId: '',
@@ -280,11 +304,34 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onNew() {
+    let date=new Date();
+    let dateYear = date.getFullYear()+'';
+    let dateMonth = date.getMonth() +1+'';
+    if(parseInt(dateMonth) < 10){
+      dateMonth = '0' + dateMonth;
+    }
+    let dateRi = date.getDate()+ '';
+    if(parseInt(dateRi) < 10){
+      dateRi = '0' + dateRi;
+    }
+    var hour = date.getHours()+''; 
+    var minutes = date.getMinutes()+''; 
+    var second = date.getSeconds()+'';
+    if(parseInt(hour) <10){
+      hour = "0" + hour;
+     }
+     if(parseInt(minutes) <10){
+      minutes = "0" + minutes;
+     }
+     if(parseInt(second) <10){
+      second = "0" + second ;
+     }
+    let fileName = dateYear+dateMonth+dateRi+hour+minutes+second;
     this.data = {
       id: '',
       version: '',
       data: { nodes: [], lines: [] },
-      name: '空白文件',
+      name: fileName,
       desc: '',
       image: '',
       userId: '',

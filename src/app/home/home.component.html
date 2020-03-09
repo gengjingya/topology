@@ -11,10 +11,14 @@
     </div>
   </div>
   <div class="full">
-    <div class="canvas" #workspace (contextmenu)="onContextMenu($event)"></div>
+    <div 
+        class="canvas black" 
+        style='
+        background:url("../assets/img/logo.png") 45% 0% / 450px 600px no-repeat rgb(255, 255, 255)'
+        #workspace (contextmenu)="onContextMenu($event)"></div>
     <div class="flex ph15 pv5">
       <div class="full flex">
-        文件名：
+        文件名2：
         <label *ngIf="!editFilename" (dblclick)="onEditFile(filenameInput)" title="双击编辑，点击空白保存">{{data.name}}</label>
         <form class="inline" [class.hidden]="!editFilename" #myForm="ngForm" [uiTouchForm]="myForm" title="双击编辑，点击空白保存">
           <input name="filename" #filenameInput class="input" [(ngModel)]="data.name" (blur)="onSaveFilename()"
